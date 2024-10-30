@@ -43,7 +43,7 @@ export default function Home() {
           <input
             placeholder={"put number" + number.toString()}
             value={value}
-            type="number"
+            type="numeric"
             onChange={(e) => {
               setValue((prev: any) => e.target.value);
             }}
