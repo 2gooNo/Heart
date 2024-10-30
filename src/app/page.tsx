@@ -11,11 +11,13 @@ export default function Home() {
   function addNumber() {
     if (isNaN(Number(value))) {
       alert("value must be number only");
+      console.log("hahahah");
+      setValue("");
+    } else {
+      setArray((prev: any) => [...prev, Number(value)]);
+      setNumber(number + 1);
+      setValue("");
     }
-
-    setArray((prev: any) => [...prev, Number(value)]);
-    setNumber(number + 1);
-    setValue("");
   }
   useEffect(() => {
     if (number == 7) {
@@ -47,7 +49,7 @@ export default function Home() {
           <input
             placeholder={"put number" + number.toString()}
             value={value}
-            type="number"
+            type="text"
             onChange={(e) => {
               setValue((prev: any) => e.target.value);
             }}
