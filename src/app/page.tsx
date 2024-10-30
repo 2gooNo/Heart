@@ -9,9 +9,10 @@ export default function Home() {
   const [sum, setSum] = useState<number>(0);
   const [value, setValue] = useState<string>("");
   function addNumber() {
-    if (typeof value != "number") {
+    if (typeof Number(value) != "number") {
       alert("value must be number only");
     }
+
     setArray((prev: any) => [...prev, Number(value)]);
     setNumber(number + 1);
     setValue("");
