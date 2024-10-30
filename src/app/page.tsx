@@ -9,6 +9,9 @@ export default function Home() {
   const [sum, setSum] = useState<number>(0);
   const [value, setValue] = useState<string>("");
   function addNumber() {
+    if (typeof value != "number") {
+      alert("value must be number only");
+    }
     setArray((prev: any) => [...prev, Number(value)]);
     setNumber(number + 1);
     setValue("");
@@ -43,7 +46,7 @@ export default function Home() {
           <input
             placeholder={"put number" + number.toString()}
             value={value}
-            type="numeric"
+            type="number"
             onChange={(e) => {
               setValue((prev: any) => e.target.value);
             }}
