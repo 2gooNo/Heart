@@ -9,7 +9,7 @@ export default function Home() {
   const [sum, setSum] = useState<number>(0);
   const [value, setValue] = useState<string>("");
   function addNumber() {
-    if (typeof Number(value) != "number") {
+    if (isNaN(Number(value))) {
       alert("value must be number only");
     }
 
