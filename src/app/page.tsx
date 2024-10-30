@@ -49,7 +49,7 @@ export default function Home() {
           <input
             placeholder={"put number" + number.toString()}
             value={value}
-            type="text"
+            type="number"
             onChange={(e) => {
               setValue((prev: any) => e.target.value);
             }}
