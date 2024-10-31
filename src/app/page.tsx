@@ -30,6 +30,13 @@ export default function Home() {
     }
   }, [number]);
 
+  const s = value;
+  if (isNaN(Number(s))) {
+    console.log("if", isNaN(Number(s)));
+  } else {
+    console.log("else", isNaN(Number(s)));
+  }
+
   console.log("array", array);
   console.log("number", number);
   console.log("value", value);
@@ -44,12 +51,13 @@ export default function Home() {
         src="https://hips.hearstapps.com/hmg-prod/images/heart-emoji-meanings-65c3b01e11012.jpg?crop=0.114xw:0.416xh;0.0170xw,0.0994xh&resize=980:*"
         className="w-[700px] h-100vw"
       /> */}
+
       {isVisible ? (
         <div>
           <input
             placeholder={"put number" + number.toString()}
             value={value}
-            type="number"
+            type="text"
             onChange={(e) => {
               setValue((prev: any) => e.target.value);
             }}
