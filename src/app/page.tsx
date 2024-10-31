@@ -10,9 +10,11 @@ export default function Home() {
   const [value, setValue] = useState<string>("");
   function addNumber() {
     if (isNaN(Number(value))) {
-      alert("value must be number only");
+      alert("usegnder too nemh ged are you oroldoh me?");
       console.log("hahahah");
       setValue("");
+    } else if (value == "") {
+      alert("neg too hiichech uhleyu");
     } else {
       setArray((prev: any) => [...prev, Number(value)]);
       setNumber(number + 1);
@@ -29,13 +31,6 @@ export default function Home() {
       setIsVisible(false);
     }
   }, [number]);
-
-  const s = value;
-  if (isNaN(Number(s))) {
-    console.log("if", isNaN(Number(s)));
-  } else {
-    console.log("else", isNaN(Number(s)));
-  }
 
   console.log("array", array);
   console.log("number", number);
